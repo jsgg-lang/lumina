@@ -589,6 +589,14 @@ footer {
   gap: 6rem;
 }
 
+.footer-divider {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2); /* lys linje */
+  margin: 3rem 0 2rem 0;
+}
+
+
 
 footer h3 {
   font-size: 1.5rem;
