@@ -1,0 +1,627 @@
+/* Variabler */
+
+:root {
+  --white: #ffffff;
+  --bg-soft-grey: #D6CDCD;
+  --bg-promo: #FCF8F3;
+  --bg-spec: #D9D9D9;
+  --bg-spec-box: #F3F2F2;
+
+  --accent: #B88E2F;
+  --accent-dark: #523F15;
+
+  --text-dark: #111;
+  --radius: 16px;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Global layout */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.section-white { background: var(--white); }
+
+.section-white h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-grey { background: var(--bg-soft-grey); }
+
+.section-spec { background: var(--bg-spec); }
+
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Header */
+ 
+.header {
+  background: var(--white);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.nav-center a:hover {
+  color: var(--accent);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-icons img {
+  width: 20px;
+}
+
+.nav-icons a {
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.nav-icons a:hover {
+  transform: scale(1.15);
+  opacity: 0.7;
+}
+
+
+/* Hero sektion */
+
+.hero {
+  background: url("/images/Højtaler.png") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-box {
+  background: #F3EDE3;
+  padding: 3rem;
+  border-radius: var(--radius);
+  max-width: 500px;
+}
+
+.overline {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-box h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+
+  background: linear-gradient(
+    180deg,
+    #B88E2F 6%,
+    #523F15 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-box p {
+  margin-bottom: 2rem;
+}
+
+/* Knapper */
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  padding: 0.85rem 2.5rem;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* populære produkter */
+
+.flex-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  flex: 1;
+  text-align: center;
+}
+
+/* kollektioner */
+
+.section-collections {
+  background: var(--bg-soft-grey);
+  padding: 8rem 0;
+}
+
+.section-collections h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.collections-grid {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.collection-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex: 1;
+}
+
+.collection-card img {
+  width: 100%;
+}
+
+.collection-card h3,
+.collection-card .price {
+  padding: 1.5rem;
+}
+
+.price {
+  margin-top: 0.5rem;
+}
+
+.price .old {
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+  opacity: 0.6;
+}
+
+/* promo sektion */
+
+.section-promo {
+  background: #EDE7E2;
+  padding: 8rem 0;
+}
+
+.promo-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+  gap: 6rem;
+}
+
+/* Venstre tekst */
+
+.promo-text h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.promo-text p {
+  margin-bottom: 2.5rem;
+  max-width: 400px;
+}
+
+.btn-gold {
+  background: #B88E2F;
+  color: white;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* slider */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 70%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+/* Glass box on top of slider */
+
+.glass-box {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  color: white;
+  width: 300px;
+}
+
+.glass-box h3 {
+  margin: 0.5rem 0 1rem 0;
+}
+
+.small {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.arrow-btn {
+  background: #B88E2F;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Arrow buttons on the sides of the slider */
+
+.dots {
+  margin-top: 1.5rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #B88E2F;
+}
+
+
+/* Venstre tekst */
+
+.promo-flex h2 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.promo-flex p {
+  margin-bottom: 2.5rem;
+  max-width: 400px;
+}
+
+/* Knap spacing */
+.promo-flex .btn-outline {
+  display: inline-block;
+}
+
+/* Højre billede */
+
+.promo-flex img {
+  width: 100%;
+  border-radius: 0;
+}
+
+/* SPECIFIKATIONER */
+
+.section-spec {
+  background: #D6D6D6;
+  padding: 10rem 0;
+}
+
+.spec-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* VENSTRE SIDE */
+
+.spec-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.spec-intro p {
+  max-width: 400px;
+  line-height: 1.7;
+}
+
+/* HØJRE BOKS */
+
+.spec-wrapper {
+  background: #ECECEC;
+  border-radius: 50px;
+  padding: 4rem 5rem;
+  max-width: 900px;
+}
+
+
+/* Rows */
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.spec-row:last-of-type {
+  border-bottom: none;
+}
+
+.spec-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.spec-text {
+  color: #6E6E6E;
+  line-height: 1.7;
+}
+
+/* Button */
+
+.spec-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.spec-button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.spec-circle {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  font-size: 1.2rem;
+}
+
+/* Instagram Grid */
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 1.5rem;
+  margin: 6rem auto;
+  max-width: 1200px;
+  padding: 0 5%;
+}
+
+.insta-section {
+  text-align: center;
+  padding: 6rem 0 3rem 0;
+  background: #f5f5f5;
+}
+
+.insta-section p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.insta-section h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.insta-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.insta-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+  transition: transform 0.4s ease;
+}
+/* Hover effekt for Instagram billeder */
+.insta-item:hover img {
+  transform: scale(1.05);
+}
+
+.insta-item:nth-child(2) {
+  grid-column: span 2;
+}
+
+.insta-item:nth-child(5) {
+  grid-row: span 2;
+}
+
+
+/* Footer */
+
+footer {
+  background: #6B4F10;
+  color: white;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+footer h3,
+footer h4 {
+  margin-bottom: 1.5rem;
+}
+
+footer p {
+  margin-bottom: 0.75rem;
+}
+
+footer input {
+  padding: 0.85rem;
+  width: 250px;
+  border-radius: 6px;
+  border: none;
+}
+
+footer button {
+  margin-top: 1rem;
+}
+
+footer button:hover {
+  background: var(--accent);
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+  .nav-center {
+    display: none;
+  }
+
+  .flex-row,
+  .collections-grid,
+  .promo-flex,
+  .spec-flex,
+  .footer-flex {
+    flex-direction: column;
+  }
+
+  .promo-flex img {
+    width: 100%;
+  }
+
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .container {
+    justify-content: center;
+  }
+
+  .hero-box {
+    max-width: 100%;
+  }
+}
