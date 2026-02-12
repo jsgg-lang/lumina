@@ -1,4 +1,4 @@
-/* Variabler */
+/* Gør det nemt for mig selv */
 
 :root {
   --white: #ffffff;
@@ -51,6 +51,8 @@ img {
 .section-white h2 {
   text-align: center;
   margin-bottom: 2rem;
+    font-size: 2.5rem;
+
 }
 
 .section-grey { background: var(--bg-soft-grey); }
@@ -190,7 +192,19 @@ img {
 }
 
 .btn-outline {
-  padding: 0.85rem 2.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-outline-footer {
+  padding: 1rem 1rem;
+  font-size: 0.63rem;
   border: 2px solid var(--accent);
   color: var(--accent);
   text-decoration: none;
@@ -227,6 +241,7 @@ img {
 .section-collections h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 .collections-grid {
@@ -248,7 +263,7 @@ img {
 
 .collection-card h3,
 .collection-card .price {
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 
 .price {
@@ -291,11 +306,17 @@ img {
 .btn-gold {
   background: #B88E2F;
   color: white;
-  padding: 1rem 2.5rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
 }
+
+.btn-gold:hover {
+  opacity: 0.9;
+}
+
 
 /* slider */
 
@@ -332,6 +353,8 @@ img {
   padding: 2rem;
   color: white;
   width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .glass-box h3 {
@@ -343,6 +366,7 @@ img {
   opacity: 0.8;
 }
 
+/* Arrow button on the side of the slider */
 .arrow-btn {
   background: #B88E2F;
   border: none;
@@ -351,8 +375,12 @@ img {
   cursor: pointer;
 }
 
-/* Arrow buttons on the sides of the slider */
+.arrow-btn:hover {
+  opacity: 0.8;
+}
 
+
+/* Dots navigation below the slider */
 .dots {
   margin-top: 1.5rem;
 }
@@ -475,9 +503,9 @@ img {
 }
 
 .spec-circle {
-  width: 60px;
-  height: 60px;
-  background: white;
+  width: 40px;
+  height: 40px;
+  background: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
