@@ -576,44 +576,73 @@ img {
 /* Footer */
 
 footer {
-  background: #6B4F10;
-  color: white;
-  padding: 6rem 0;
-  width: 100%;
+  background: #F5F5F5;
+  color: #111;
+  padding: 6rem 0 3rem 0;
 }
+
 
 .footer-flex {
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
   align-items: flex-start;
+  gap: 6rem;
 }
 
-footer h3,
+
+footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
 footer h4 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 footer p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  color: #666;
 }
+
 
 footer input {
-  padding: 0.85rem;
-  width: 250px;
-  border-radius: 6px;
   border: none;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  padding: 0.5rem 0;
+  width: 250px;
+  outline: none;
 }
 
+
 footer button {
-  margin-top: 1rem;
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1rem;
+  font-style:semibold;
+
 }
 
 footer button:hover {
-  background: var(--accent);
-  color: var(--white);
+  color: black;
   cursor: pointer;
 }
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tilmeld-knap {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
 
 /* ===================== */
 /* RESPONSIVE */
